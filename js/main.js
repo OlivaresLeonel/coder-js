@@ -1,25 +1,29 @@
-
-
+let eleccion;
 do {
-    let eleccion;
     alert(`Bienvenido de nuevo!`);
+
+    //por debajo de esta linea se le pide al usuario que tome una decicion entre las 3 opciones de la pagina web a la hora del "login"
 
     eleccion = parseInt(prompt(`Desea iniciar sesion? Pulse: \n 1 \n Desea crear una cuenta? Pulse:\n 2 \n Desea contactarse con soporte? Pulse: \n 3`));
 
     switch (eleccion) {
         case 1:
-            login(); 
+            login();
             break;
         case 2:
-            crearCuenta(); 
+            crearCuenta();
             break;
         case 3:
-            contactarSoporte(); 
+            contactarSoporte();
             break;
         default:
             alert("Eleccion invalida. Por favor, elija una opcion valida.");
     }
-} while (eleccion !== 1 && eleccion !== 2 && eleccion !== 3);
+} while (eleccion !== 1 && eleccion !== 2 && eleccion !== 3); 
+
+//el while es para que despues de que ninguna de las opciones dadas sea puesta se le vuelva a pedir lo mismo
+
+//funciones para desarrollar el modelo de inicio de sesion para ser mas realista
 
 function login() {
     let usuarioIngresado = prompt("Por favor ingresa tu nombre de usuario:");
@@ -42,4 +46,3 @@ function contactarSoporte() {
 
     alert("Su mensaje ha sido enviado al equipo de soporte. Gracias por contactarnos.");
 }
-   
